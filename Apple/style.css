@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+* {
+  /* Defines how the width and height of an element are calculated: should they include padding and borders, or not*/
+  box-sizing: border-box;
+}
+
+body {
+  /* decides the font */
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  /* aligns the element in the center */
+  align-items: center;
+    /* aligns the element in the center */
+  justify-content: center;
+  /* decides the height of the element */
+  height: 100vh;
+  overflow: hidden;
+  /* decides the thickness of the margin around your element */
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  /* decides the width of your element */
+  width: 90vw;
+}
+
+.panel {
+  /*scales the image (while preserving its ratio) */
+  background-size: cover;
+  /* centers the images inside of the element */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  /* decides the rounding of the edging of the elements */
+  border-radius: 50px;
+  color: #fff;
+  /* changes the cursor to a pointer hand when it hovers over the element */
+  cursor: pointer;
+  /* decides the width of all elements together */
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+  /* decides the font size */
+  font-size: 24px;
+  /* decides where the text will be */
+  position: absolute;
+  /* positioning the text */
+  bottom: 20px;
+  /* positioning the text */
+  left: 20px;
+  /* positioning the text */
+  margin: 0;
+  /* hides the text on the other elements */
+  opacity: 0;
+  color: white;
+  background: rgba(0,0,0,0.5)
+}
+
+.panel.active {
+  /* decides how big the active element is */
+  flex: 5;
+}
+
+.panel.active h3 {
+  /* shows the text on the active element */
+  opacity: 1;
+/* delays showing the text for 0.3s and then moves with the element */
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+.landing_page{
+  position: absolute;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  left: 50%;
+  top: 2%;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border: rgb(0, 0, 0) solid 0.2rem;
+  font-size: 1rem;
+  width: 5rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgb(61, 59, 59);
+  border-color: rgb(61, 59, 59);
+}
