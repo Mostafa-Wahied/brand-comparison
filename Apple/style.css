@@ -16,7 +16,7 @@ body {
   justify-content: center;
   /* decides the height of the element */
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* decides the thickness of the margin around your element */
   margin: 0;
   overflow: scroll;
