@@ -4,6 +4,8 @@
 * {
   /* Defines how the width and height of an element are calculated: should they include padding and borders, or not*/
   box-sizing: border-box;
+  overflow: auto;
+  
 }
 
 body {
